@@ -15,15 +15,7 @@ public class JsonTest {
 
 	@Test
 	public void testJson() throws Exception {
-		JsonNode collection = Json.toJson("""
-			{
-				"name": "example_collection",
-				"vectors": {
-					"size": 300,
-					"distance": "Cosine"
-				}
-			}
-			""");
+		JsonNode collection = Json.toJson("{ \"name\": \"example_collection\", \"vectors\": { \"size\": 300, \"distance\": \"Cosine\" } }");
 
 		JsonNode json = Json.toJson(collection.toString());
 		assertNotNull(json);
